@@ -1,0 +1,43 @@
+.header {
+    border-bottom: 1px solid #8b8686;
+}
+
+.navbar {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    &__lists {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__list {
+        font-size: 14px;
+    }
+
+    &__menu {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+
+         &__lists {
+            display: none;
+        }
+
+        &__menu {
+            display: flex;
+            padding: 10px;
+        }
+
+    }
+}

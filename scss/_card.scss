@@ -1,0 +1,50 @@
+.card {
+    margin-top: 35px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: auto auto auto;
+
+
+
+    &__img {
+        height: 254px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__body {
+        h3 {
+            font-family: Libre Franklin;
+            font-size: 10px;
+            font-weight: 400;
+            color: #999999;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-family: "Tenor";
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            font-size: 10px;
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .card {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .card {
+        grid-template-columns: auto;
+    }
+}
+
