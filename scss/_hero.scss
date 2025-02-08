@@ -1,66 +1,184 @@
 .hero {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: 100%;
-    margin-top: 59px;
+    margin-top: 70px;
 
-    &__img {
-        img {
-            height: 474px;
-            width: 100%;
-            object-fit: cover;
-        }
+
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
     }
 
     &__text {
-        max-width: 500px;
-        padding: 0 50px;
+        padding: 100px 0;
+        width: 100%;
 
-        h3 {
-            font-family: "Tenor";
-            font-size: 10px;
-            font-weight: 400;
-            line-height: 12px;
-            color: #999999;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-
-        h2 {
-            font-family: "Tenor";
-            font-size: 36px;
-            font-weight: 400;
-            line-height: 42px;
+        h1 {
+            font-family: "Poppins", serif;
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 80px;
             text-align: left;
-            margin-bottom: 18px;
-            text-transform: uppercase;
+
+
+
         }
 
         p {
-            font-family: Source Serif Pro;
-            font-size: 16px;
+            font-family: "Poppins", serif;
+            font-size: 24px;
             font-weight: 400;
-            line-height: 24px;
+            line-height: 36px;
             text-align: left;
-            color: #666666;
-            margin-bottom: 18px;
+            padding-top: 40px;
         }
 
-        a {
-            font-size: 10px;
-            font-weight: 700;
-            text-align: left;
+        button {
+            width: 438px;
+            height: 118px;
+            border-radius: 15px;
+            margin-top: 60px;
+            font-family: "Poppins", serif;
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 54px;
+            background: #263238;
+            color: #fff;
         }
+    }
+
+    &__title {
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 60%;
+            top: 40%;
+        }
+    }
+
+    &__img {
+        width: 100%;
     }
 }
 
-@media (max-width:760px) {
+
+@media(max-width:1090px) {
     .hero {
-        grid-template-columns: 1fr;
 
         &__text {
-            padding: 0;
+            padding: 100px 0;
+            width: 100%;
+
+            h1 {
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 64px;
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+            }
+
+            button {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 36px;
+
+            }
         }
     }
 }
 
+@media(max-width:800px) {
+    .hero {
+
+
+        &__text {
+            padding: 100px 0;
+            width: 100%;
+
+            h1 {
+                font-size: 36px;
+                font-weight: 600;
+                line-height: 45px;
+
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+             
+            }
+
+            button {
+                width: 236px;
+                height: 65px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+     
+    }
+}
+@media(max-width:600px){
+    .hero {
+        &__wrapper{
+            grid-template-columns: repeat(1, 1fr);
+         
+        }
+        &__text{
+            order: 2;
+            padding: 0;
+          h1{
+            text-align: center;
+        }
+        img{
+            display: none;
+        }
+        p{
+            text-align: center;
+        }
+        button {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            margin-left: 28%;
+        }
+        }
+        &__img{
+            order: 1;
+        }
+    }
+}
+@media(max-width:390px){
+    .hero {
+      
+        
+        &__text{
+            order: 2;
+            padding: 0;
+          h1{
+            text-align: center;
+           
+        }
+        img{
+            display: none;
+        }
+        p{
+            text-align: center;
+            font-size: 14px;
+           
+        }
+        button {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            margin-left: 15%;
+        }
+    }
+}
+}
